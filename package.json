@@ -1,0 +1,51 @@
+{
+  "name": "energy-insight-card",
+  "version": "0.1.0",
+  "description": "A modern Home Assistant Lovelace card for advanced energy analysis and insights.",
+  "author": "Energy Insight Card contributors",
+  "license": "MIT",
+  "type": "module",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<YOUR_GITHUB_ACCOUNT>/energy-insight-card.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/<YOUR_GITHUB_ACCOUNT>/energy-insight-card/issues"
+  },
+
+  "homepage": "https://github.com/<YOUR_GITHUB_ACCOUNT>/energy-insight-card",
+
+  "keywords": [
+    "home-assistant",
+    "lovelace",
+    "energy",
+    "dashboard",
+    "statistics",
+    "analytics",
+    "hacs"
+  ],
+
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts",
+    "format": "prettier --write ."
+  },
+
+  "dependencies": {
+    "lit": "^3.3.0"
+  },
+
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "eslint": "^9.31.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.6"
+  }
+}
