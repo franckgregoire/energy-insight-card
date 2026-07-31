@@ -1,2 +1,0 @@
-class HomeAssistantStatisticsProvider
-  implements StatisticsProvider
