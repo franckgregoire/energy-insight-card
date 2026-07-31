@@ -1,12 +1,8 @@
 /**
  * Energy Insight Card
- *
- * Core domain models representing energy measurements.
+ * Core domain types
  */
 
-/**
- * Supported aggregation levels.
- */
 export type EnergyPeriod =
   | "hour"
   | "day"
@@ -14,72 +10,21 @@ export type EnergyPeriod =
   | "month"
   | "year";
 
-/**
- * Represents a single energy measurement.
- */
-export interface EnergyValue {
-  /**
-   * Timestamp corresponding to the measurement.
-   */
-  readonly date: Date;
+export type EnergyValue = Readonly<{
+  date: Date;
+  consumption: number;
+  cost?: number;
+}>;
 
-  /**
-   * Energy consumed during the period.
-   *
-   * Unit: kWh
-   */
-  readonly consumption: number;
+export type EnergySeries = Readonly<{
+  period: EnergyPeriod;
+  values: readonly EnergyValue[];
+}>;
 
-  /**
-   * Optional energy cost.
-   *
-   * Unit: €
-   */
-  readonly cost?: number;
-}
-
-/**
- * Represents a collection of energy values
- * aggregated over the same period.
- */
-export interface EnergySeries {
-  /**
-   * Aggregation level.
-   */
-  readonly period: EnergyPeriod;
-
-  /**
-   * Ordered measurements.
-   */
-  readonly values: readonly EnergyValue[];
-}
-
-/**
- * Summary statistics computed from an EnergySeries.
- */
-export interface EnergySummary {
-  /**
-   * Total consumption.
-   */
-  readonly totalConsumption: number;
-
-  /**
-   * Average consumption.
-   */
-  readonly averageConsumption: number;
-
-  /**
-   * Peak consumption.
-   */
-  readonly maxConsumption: number;
-
-  /**
-   * Minimum consumption.
-   */
-  readonly minConsumption: number;
-
-  /**
-   * Total cost.
-   */
-  readonly totalCost?: number;
-}
+export type EnergySummary = Readonly<{
+  totalConsumption: number;
+  averageConsumption: number;
+  maxConsumption: number;
+  minConsumption: number;
+  totalCost?: number;
+}>;
