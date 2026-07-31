@@ -8,14 +8,14 @@
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/<YOUR_GITHUB_ACCOUNT>/energy-insight-card.git"
+    "url": "https://github.com/franckgregoire/energy-insight-card.git"
   },
 
   "bugs": {
-    "url": "https://github.com/<YOUR_GITHUB_ACCOUNT>/energy-insight-card/issues"
+    "url": "https://github.com/franckgregoire/energy-insight-card/issues"
   },
 
-  "homepage": "https://github.com/<YOUR_GITHUB_ACCOUNT>/energy-insight-card",
+  "homepage": "https://github.com/franckgregoire/energy-insight-card",
 
   "keywords": [
     "home-assistant",
